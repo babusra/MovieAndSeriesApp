@@ -8,7 +8,7 @@ const navigator =createStackNavigator(
   {
     Home: HomeScreen,
     List:ListScreen,
-  
+
   },
   {
     initialRouteName: "Home",

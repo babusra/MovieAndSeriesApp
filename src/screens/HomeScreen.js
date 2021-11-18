@@ -1,11 +1,26 @@
 import React from "react";
-import { Text,StyleSheet,View } from "react-native";
+import { Text,StyleSheet,View, Image} from "react-native";
+import { Button,Provider as PaperProvider} from "react-native-paper";
 
 const HomeScreen=()=>{
   return(
-  <View>
-    <Text>Home Page</Text>
-  </View>
+ <PaperProvider>
+   <View style={{ flexDirection:"row" }}>
+   <View>
+    <View>
+      <Button mode="contained" onPress={() =>console.log('Pressed')}>
+        <Image source={require('../../assets/witcher.jpg')} />
+      </Button>
+    </View>
+
+    <View>
+      <Button mode="contained" onPress={() =>console.log('Pressed')}>
+        <Image source={require('../../assets/jum.jpg')} />
+      </Button>
+    </View>
+    </View> 
+    </View>
+    </PaperProvider> 
   )};
 
 const styles=StyleSheet.create({});

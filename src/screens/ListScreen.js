@@ -2,11 +2,11 @@ import React from "react";
 import { Text, StyleSheet, View} from "react-native";
 
 const ListScreen=()=>{
-    return(
+    return( 
     <View>
-        <Text>ListScreen</Text>
+       <Text>ListScreen</Text>
     </View>
-    )};
+  )};
 
 const styles=StyleSheet.create({});
 
