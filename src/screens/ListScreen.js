@@ -34,6 +34,7 @@ const ListScreen=(props)=>{
         return item.title.includes(searchQuery);
       });
     }
+
     r.sort(function(a, b) {
       switch(value){
 
@@ -49,8 +50,6 @@ const ListScreen=(props)=>{
 
     return r;
 }
-
-
   const data=filteredData();
   
 
