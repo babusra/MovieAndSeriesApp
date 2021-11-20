@@ -8,12 +8,11 @@ const navigator =createStackNavigator(
   {
     Home: HomeScreen,
     List:ListScreen,
-
   },
   {
     initialRouteName: "Home",
     defaultNavigationOptions: {
-      title: "App",
+      title: "Bulut MD",
     },
   }
 );
