@@ -3,6 +3,7 @@ import { Text, StyleSheet,View} from "react-native";
 import { FlatList } from "react-native-gesture-handler";
 import { Searchbar} from "react-native-paper";
 import DropDownPicker from "react-native-dropdown-picker";
+import ContentDetail from "../components/ContentDetail";
 const serMovData = require('../data/seriesMoviesdata.json').entries;
 
 
@@ -50,6 +51,10 @@ const ListScreen=(props)=>{
 
     return r;
 }
+
+const renderItem = ({ item }) => (
+  <ContentDetail serMovData={item}></ContentDetail>
+);
   const data=filteredData();
   
 
@@ -62,9 +67,11 @@ const ListScreen=(props)=>{
         value={searchQuery}/>
 
 
+    <Text style={{margin:5.0}}>{data.length} {programType} kaydı bulundu</Text>
     <FlatList 
-        data={data} 
-        renderItem={({item})=>{return <Text>{item.title}</Text>;}}></FlatList>
+      data={data}
+      renderItem={renderItem}
+    ></FlatList>
   
 
 
