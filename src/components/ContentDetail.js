@@ -2,21 +2,21 @@ import React from 'react';
 import {StyleSheet} from 'react-native';
 import {Avatar,Card, Paragraph } from 'react-native-paper';
 
-const ContentDetail =({serMovData})=>{
+const ContentDetail =({movieData})=>{
 
    
     return <Card style={{margin:5.0}}>
         <Card.Title
-            title={serMovData.title}
-            subtitle={serMovData.releaseYear}
-            left={(props) => <Avatar.Icon {...props} icon={serMovData.programType=='series'?'movie':'record-roll'} />}
+            title={movieData.title}
+            subtitle={movieData.releaseYear}
+            left={(props) => <Avatar.Icon {...props} icon={movieData.programType=='series'?'movie':'movie-roll'} />}
            
         />
 
         <Card.Content>
-        <Card.Cover source={{ uri: `${Object.values(serMovData.images)[0].url}`}} />
+        <Card.Cover source={{ uri: `${Object.values(movieData.images)[0].url}`}} />
 
-        <Paragraph style={{textAlign:'center'}}>{serMovData.description}</Paragraph>
+        <Paragraph style={{textAlign:'center'}}>{movieData.description}</Paragraph>
         </Card.Content>
     </Card>
 }
@@ -24,3 +24,4 @@ const ContentDetail =({serMovData})=>{
 const style=StyleSheet.create({});
 
 export default ContentDetail;
+

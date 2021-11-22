@@ -13,7 +13,7 @@ const HomeScreen=(props)=>{
         
       <View style={{flexDirection:'row'}}>
         <TouchableOpacity onPress={()=>{
-          props.navigation.navigate('List',{programType:'series'});
+          props.navigation.navigate('List',{programType:'series'}); //  Shows the series by navigated to the list screen
           }} style={{flex:1}}>
 
           <Card style={{marginEnd:20}}>
@@ -25,7 +25,7 @@ const HomeScreen=(props)=>{
           </TouchableOpacity>
 
         <TouchableOpacity onPress={()=>{
-          props.navigation.navigate('List',{programType:'movie'});
+          props.navigation.navigate('List',{programType:'movie'}); //   Shows the series by navigated to the list screen
           }} style={{flex:1}}>
 
           <Card style={{flex:1}}>
@@ -35,9 +35,10 @@ const HomeScreen=(props)=>{
             </Card.Content>
             </Card>
             </TouchableOpacity>
-        </View>
-        
+            
+        </View>        
     </View>
+
   )};
 
 const styles=StyleSheet.create({
